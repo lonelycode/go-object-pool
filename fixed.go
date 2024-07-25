@@ -11,7 +11,7 @@ type PooledObject interface {
 
 // All pooled object factories must satisfy this interface
 type PooledObjectFactory interface {
-	Create() (PooledObject, error)
+	Create(...args) (PooledObject, error)
 }
 
 // All pool implementations must satisfy this interface
